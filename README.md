@@ -22,7 +22,7 @@ pip install -r requirements.txt
 - wordninja
 
 ## Results
-- **Accuracy**: Up to 96.10% on test datasets
+- **Accuracy**: Up to 93.69% on test1 datasets
 - **Processing Speed**: Parallel processing with ThreadPoolExecutor
 
 ## Future Work
