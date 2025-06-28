@@ -1,37 +1,35 @@
-# Data Mining Assignment 1 - Name Matching and Deduplication
+# Record Linkage Project for SCUPI DATAMining
 
-## Project Description
-This project implements fuzzy name matching and deduplication functionality, including:
+A Python project for data cleaning and matching, developed by the team from Sichuan University-Pittsburgh Institute.
 
-1. Name fuzzy matching using fuzzywuzzy and rapidfuzz libraries
-2. Multi-threaded parallel matching for improved efficiency
-3. Accuracy evaluation of matching results
-4. Deduplication of raw data
+## Project Overview
+This project focuses on **record linkage**, aiming to accurately identify and link related records from different data sources. It includes data cleaning, fuzzy matching, and hierarchical matching algorithms.
 
-## File Description
+## Features
+- **Data Cleaning**: Standardize and normalize input data using word segmentation and character replacement.
+- **Matching Algorithm**: Use `rapidfuzz` for efficient fuzzy matching with multiple scoring methods.
+- **Hierarchical Matching**: Three-stage matching process with language detection, dictionary processing, and fuzzy matching.
 
-- `data_matcher.py`: Main program file containing matching and deduplication logic
-- `primary.csv`: Original primary name data
-- `alternate.csv`: Original alternate name data
-- `test_01.csv`: Test data
-- `matched_results.csv`: Matching results output
-- `deduplicated_results.csv`: Deduplication results output
-
-## Usage
-
-1. Install required dependencies:
+## Installation
 ```
-pip install pandas fuzzywuzzy rapidfuzz tqdm
+pip install -r requirements.txt
 ```
 
-2. Run `HW1.ipynb` file
+## Dependencies
+- Python >= 3.9
+- pandas >= 2.3.0
+- rapidfuzz >= 3.13.0
+- wordninja
 
-3. Results will be saved to `matched_results.csv` and `deduplicated_results.csv`
+## Results
+- **Accuracy**: Up to 96.10% on test datasets
+- **Processing Speed**: Parallel processing with ThreadPoolExecutor
 
-## Matching Example
-```
-39777,"SRABIONOV, T K",39777,"SRABIONOV, Tigran Khristoforovich",85.71428571428571,1
-```
+## Future Work
+- Optimize performance using vectorization and caching.
+- Explore advanced algorithms for complex data variations.
 
-## Author
-Hedong
+## Files
+- `data_matcher.py`: Main matching algorithm implementation
+- `HW1.ipynb`: Initial experiments and testing
+- `HW1_2.ipynb`: Advanced matching techniques and analysis
